@@ -1,0 +1,20 @@
+작업 환경
+- Windows 7 (64bit)
+- lenovo ThinkPad E320
+
+1. python 2.7.5 인스톨 버전 설치
+2. 환경변수(Path)에 Python 설치된 폴더 추가
+3. 확인은 cmd(터미널)에 접속 후 명령어(python --version)
+4. django 다운로드 압축해제
+5. 압출해제된 Django 폴더에서 python setup.py install 실행
+6. 정상적인 설치라면 C:\Django-1.5.4\django\bin 에 django-admin.py가 생성된다. 
+7. django를 실행할 폴더로 django-admin.py를 옮긴 후 Django 압축해제한 폴더를 삭제한다.(안 해되 상관 없다)
+	- 정상적인 설치 확인 : python django-admin.py --version
+
+8. 프로젝트 생성
+	- python django-admin.py startproject 생성프로젝트이름(편의상 sample)
+	- 하위 폴더로 sample이 생성된다.
+9. 프로젝트 실행
+	- sample 폴더에서 python manage.py runserver 8080(port) 을 실행한다.
+	- 포트는 생략할 수 있으나 이미 사용중인 경우 오류가 발생한다.
+	- 인터넷 브라우저에 http://127.0.0.1:8080에 접속
