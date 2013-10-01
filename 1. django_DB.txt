@@ -1,0 +1,25 @@
+DB 설정
+1. project 폴더 내 settings.py 파일에서
+	- DATABASES 설정
+		- ENGINE : django.db.backends.sqlite3
+		- NAME : sample.db	
+	- TIME_ZONE 설정 : Asia/Seoul
+	- LANGUAGE_CODE 설정 : ko-kr
+2. model 설정
+	- python manage.py startapp [article]
+	- [article] models.py 설정(해당 파일 확인 요망)
+	
+	- setting.py 설정 : syncdb 시 설정된 튜플은 Table이 없을 시 생성된다.
+		- 'article', 추가
+	- python manage.py syncdb (setings.py에 설정됭 DB와 연동한다)
+		- 처음일 시에는 슈퍼유저를 설정할 수 있다.(임시로 sgs/sgs 설정)
+	- 생성문 확인 : python manage.py sql article
+
+
+python manage.py shell
+from django.utils from timezone
+Article.objects.all()
+a = Article(title="1", bode="2", pub_date=timezone.now(), likes=0)
+a.save()
+a.id
+
