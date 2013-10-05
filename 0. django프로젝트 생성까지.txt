@@ -18,3 +18,5 @@
 	- sample 폴더에서 python manage.py runserver 8080(port) 을 실행한다.
 	- 포트는 생략할 수 있으나 이미 사용중인 경우 오류가 발생한다.
 	- 인터넷 브라우저에 http://127.0.0.1:8080에 접속
+
+	* 외부 접속을 허용할 경우 : python manage.py runserver 0.0.0.0:8080
